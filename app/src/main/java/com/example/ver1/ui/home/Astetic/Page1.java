@@ -22,9 +22,9 @@ public class Page1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page1, container, false);
 
-        btn_move_page1_list1 = (Button) view.findViewById(R.id.btn_move_page1_list1);
-        btn_move_page1_list2 = (Button) view.findViewById(R.id.btn_move_page1_list2);
-        btn_move_page1_list3 = (Button) view.findViewById(R.id.btn_move_page1_list3);
+        btn_move_page1_list1 = (Button) view.findViewById(R.id.btn_move_page2_list1);
+        btn_move_page1_list2 = (Button) view.findViewById(R.id.btn_move_page2_list2);
+        btn_move_page1_list3 = (Button) view.findViewById(R.id.btn_move_page2_list3);
 
         btn_move_page1_list1.setOnClickListener(myListener);
         btn_move_page1_list2.setOnClickListener(myListener);
@@ -43,16 +43,16 @@ public class Page1 extends Fragment {
 
 
             switch (v.getId()) {
-                case R.id.btn_move_page1_list1:
+                case R.id.btn_move_page2_list1:
                     btn_move_page1_list1.setSelected(true);
                     movePage1List1();
                     break;
-                case R.id.btn_move_page1_list2 :
+                case R.id.btn_move_page2_list2:
                     btn_move_page1_list2.setSelected(true);
                     movePage1List2();
                     break;
 
-                case R.id.btn_move_page1_list3 :
+                case R.id.btn_move_page2_list3:
                     btn_move_page1_list3.setSelected(true);
                     movePage1List3();
                     break;

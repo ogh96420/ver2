@@ -6,4 +6,26 @@
         <item>네일</item>
         <item>큐어</item>
     </string-array>
+    <string-array name="price_array1">
+        <item>전체</item>
+        <item>가격 높은순</item>
+        <item>가격 높은순</item>
+    </string-array>
+    <string-array name="price_array2">
+        <item>전체</item>
+        <item>가격 높은순</item>
+        <item>가격 높은순</item>
+    </string-array>
+    <string-array name="price_array3">
+        <item>전체</item>
+        <item>가격 높은순</item>
+        <item>가격 높은순</item>
+    </string-array>
+    <string-array name="price_array4">
+        <item>전체</item>
+        <item>가격 높은순</item>
+        <item>가격 높은순</item>
+    </string-array>
+
+
 </resources>

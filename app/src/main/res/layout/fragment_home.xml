@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,10 +40,10 @@
                 android:id="@+id/btn_wax"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="190dp"
+                android:layout_marginEnd="20dp"
                 android:background="#ffffff"
-                app:layout_constraintStart_toEndOf="@+id/btn_nail"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/wax" />
 
@@ -51,10 +51,12 @@
                 android:id="@+id/btn_nail"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="88dp"
                 android:layout_marginTop="190dp"
+                android:layout_marginEnd="88dp"
                 android:background="#ffffff"
-                app:layout_constraintStart_toEndOf="@+id/btn_half"
+                app:layout_constraintEnd_toStartOf="@+id/btn_wax"
+                app:layout_constraintStart_toEndOf="@+id/btn_ast"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/nail" />
 
@@ -62,22 +64,35 @@
                 android:id="@+id/btn_half"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="190dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="88dp"
                 android:background="#ffffff"
-                app:layout_constraintStart_toEndOf="@+id/btn_ast"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_store"
+                app:layout_constraintStart_toEndOf="@+id/btn_in"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
                 app:srcCompat="@drawable/makeup" />
+
+            <ImageButton
+                android:id="@+id/btn_store"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:srcCompat="@drawable/btn_stroe" />
 
             <ImageButton
                 android:id="@+id/btn_in"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="190dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:background="#ffffff"
-                app:layout_constraintStart_toEndOf="@+id/btn_wax"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
                 app:srcCompat="@drawable/in" />
 
             <ImageButton
@@ -95,23 +110,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginBottom="28dp"
+                android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/btn_ast"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/movie1"
-                android:scaleType="fitXY"/>
+                app:srcCompat="@drawable/movie1" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="800dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_wax"
+                app:layout_constraintTop_toTopOf="parent"
                 app:tabIndicatorColor="#ff6f61"
                 app:tabIndicatorFullWidth="false"
                 app:tabSelectedTextColor="#ff6f61">
@@ -146,7 +161,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_vw"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="350dp"
                 android:layout_marginTop="2dp"
                 android:background="#ffffff"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -156,14 +171,13 @@
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/tab_View"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0"></androidx.viewpager.widget.ViewPager>
+                    app:layout_constraintTop_toTopOf="parent"></androidx.viewpager.widget.ViewPager>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -185,57 +199,111 @@
                 android:id="@+id/textView16"
                 android:layout_width="65dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginEnd="88dp"
                 android:fontFamily="@font/bazzi"
                 android:gravity="center"
                 android:text="메이크업"
                 android:textColor="#ff6f61"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintEnd_toStartOf="@+id/textView27"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
                 app:layout_constraintTop_toBottomOf="@+id/btn_half" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/bazzi"
+                android:gravity="center"
+                android:text="스토어"
+                android:textColor="#ff6f61"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_store" />
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="65dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginEnd="88dp"
                 android:fontFamily="@font/bazzi"
                 android:gravity="center"
                 android:text="네일아트"
                 android:textColor="#ff6f61"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintEnd_toStartOf="@+id/textView18"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
                 app:layout_constraintTop_toBottomOf="@+id/btn_nail" />
 
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="65dp"
                 android:layout_height="20dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="@font/bazzi"
                 android:gravity="center"
                 android:text="왁싱"
                 android:textColor="#ff6f61"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_wax" />
 
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="65dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="10dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/bazzi"
                 android:gravity="center"
                 android:text="속눈썹"
                 android:textColor="#ff6f61"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_in" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="내 주변 추천 디자이너"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bazzi"
+                app:layout_constraintBottom_toTopOf="@+id/tab_home"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/bazzi"
+                android:text="최근 본 목록"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+            </FrameLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

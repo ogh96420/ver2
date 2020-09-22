@@ -12,7 +12,6 @@ import com.example.ver1.R;
 public class AsteticActivity extends AppCompatActivity {
     Button btn_move_page1;
     Button btn_move_page2;
-    Button btn_move_page3;
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +25,9 @@ public class AsteticActivity extends AppCompatActivity {
     {
         btn_move_page1 = (Button) findViewById(R.id.btn_move_page1);
         btn_move_page2 = (Button) findViewById(R.id.btn_move_page2);
-        btn_move_page3 = (Button) findViewById(R.id.btn_move_page3);
 
         btn_move_page1.setOnClickListener(myListener);
         btn_move_page2.setOnClickListener(myListener);
-        btn_move_page3.setOnClickListener(myListener);
         btn_move_page1.setSelected(true);
     }
 
@@ -43,7 +40,6 @@ public class AsteticActivity extends AppCompatActivity {
         {
             btn_move_page1.setSelected(false);
             btn_move_page2.setSelected(false);
-            btn_move_page3.setSelected(false);
             switch (v.getId())
             {
                 case R.id.btn_move_page1 :
@@ -54,11 +50,6 @@ public class AsteticActivity extends AppCompatActivity {
                 case R.id.btn_move_page2 :
                     btn_move_page2.setSelected(true);
                     movePage2();
-                    break;
-
-                case R.id.btn_move_page3 :
-                    btn_move_page3.setSelected(true);
-                    movePage3();
                     break;
             }
         }
@@ -81,12 +72,5 @@ public class AsteticActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.ll_page, page2);
         fragmentTransaction.commit();
     }
-    public void movePage3()
-    {
-        Page3 page3 = new Page3();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.ll_page, page3);
-        fragmentTransaction.commit();
-    }
+
 }

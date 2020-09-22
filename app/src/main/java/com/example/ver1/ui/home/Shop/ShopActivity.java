@@ -1,9 +1,9 @@
 package com.example.ver1.ui.home.Shop;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -13,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 
 
 public class ShopActivity extends AppCompatActivity {
-    private ImageButton btn5;
+    private Spinner spinner;
     private Shoplistpager fragmentPagerAdapter;
 
     @Override
@@ -31,17 +31,21 @@ public class ShopActivity extends AppCompatActivity {
         viewPager.setAdapter(fragmentPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
+        spinner = (Spinner)findViewById(R.id.spinner_shop_filter1);
 
-        btn5 = findViewById(R.id.button5);
-
-        btn5.setOnClickListener(new View.OnClickListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Intent in = new Intent(ShopActivity.this, ShopfilterActivity.class);
-                startActivity(in);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
+
+
 
     }
 }

@@ -25,7 +25,6 @@ public class ShopAestheticAdapter extends RecyclerView.Adapter<ShopAestheticAdap
     private Context context;
     private Intent intent;
 
-
     public ShopAestheticAdapter(ArrayList<User> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context = context;
@@ -37,10 +36,11 @@ public class ShopAestheticAdapter extends RecyclerView.Adapter<ShopAestheticAdap
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         CustomViewHolder holder = new CustomViewHolder(view);
         return holder;
+
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CustomViewHolder holder, final int position) {
         Glide.with(holder.itemView)
                 .load(arrayList.get(position).getProfile())
                 .into(holder.iv_profile);
@@ -48,11 +48,17 @@ public class ShopAestheticAdapter extends RecyclerView.Adapter<ShopAestheticAdap
         holder.tv_pw.setText(arrayList.get(position).getPw());
         holder.tv_userName.setText(arrayList.get(position).getUserName());
 
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent = new Intent(v.getContext(), ShopinfoActivity.class);
+                intent.putExtra("Name", arrayList.get(position).getId());
+                intent.putExtra("Area", arrayList.get(position).getPw());
+                intent.putExtra("Menu", arrayList.get(position).getUserName());
                 v.getContext().startActivity(intent);
+
+
             }
         });
     }

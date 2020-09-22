@@ -12,25 +12,39 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_move_page1_list1"
+            android:id="@+id/btn_move_page2_list1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="서울지하철"
-            android:textSize="10sp" />
+            android:text="수도권"
+            android:textSize="14sp" />
 
         <Button
-            android:id="@+id/btn_move_page1_list2"
+            android:id="@+id/btn_move_page2_list2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="경기지하철"
-            android:textSize="10sp" />
+            android:text="부산"
+            android:textSize="14sp" />
 
         <Button
-            android:id="@+id/btn_move_page1_list3"
+            android:id="@+id/btn_move_page2_list3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="인천지하철"
-            android:textSize="10sp" />
+            android:text="대구"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_move_page2_list4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="광주"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_move_page2_list5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="대전"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout

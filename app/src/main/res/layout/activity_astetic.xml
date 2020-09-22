@@ -25,14 +25,8 @@
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="역주변" />
+            android:text="지하철역" />
 
-        <Button
-            android:id="@+id/btn_move_page3"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="지도보기" />
     </LinearLayout>
 
     <LinearLayout

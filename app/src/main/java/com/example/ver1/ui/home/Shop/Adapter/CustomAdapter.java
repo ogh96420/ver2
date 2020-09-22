@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +28,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     private Intent intent;
 
 
-    public CustomAdapter(ArrayList<User> arrayList, Context context) {
+    public CustomAdapter(ArrayList<User> arrayList, ArrayList<User> list, Context context) {
         this.arrayList = arrayList;
         this.context = context;
     }
@@ -40,7 +42,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CustomViewHolder holder, final int position) {
         Glide.with(holder.itemView)
                 .load(arrayList.get(position).getProfile())
                 .into(holder.iv_profile);
@@ -77,5 +79,4 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             this.tv_userName = itemView.findViewById(R.id.tv_userName);
         }
     }
-    
 }

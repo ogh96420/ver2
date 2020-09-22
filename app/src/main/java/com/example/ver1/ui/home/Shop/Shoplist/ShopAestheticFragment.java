@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,6 +35,7 @@ public class ShopAestheticFragment extends Fragment {
     private ArrayList<User> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
+    private ImageButton imageButton;
 
     public static ShopAestheticFragment newInstance() {
         ShopAestheticFragment shopaestheticFragment = new ShopAestheticFragment();

@@ -10,45 +10,48 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.home.Shop.ShopActivity"></activity>
-        <activity android:name=".ui.login.LoginActivity"></activity>
-        <activity android:name=".ui.login.RegisterActivity"></activity>
+        <activity android:name=".ui.home.Shop.ShopActivity"
+            android:windowSoftInputMode="adjustPan"></activity> <!-- 키보드 화면 고정 -->
         <activity android:name=".ui.Admin.AdminActivity"></activity>
         <activity android:name=".ui.Admin.ConfigActivity"></activity>
         <activity android:name=".ui.Admin.UpdateActivity"></activity>
         <activity android:name=".ui.Admin.Openbook"></activity>
         <activity android:name=".ui.Admin.QuestionActivity"></activity>
+        <activity android:name=".ui.Admin.AdminActivityLogin"></activity>
+        <activity android:name=".ui.login.MemberInitActivity"></activity>
+        <activity android:name=".ui.login.PasswordResetActivity"></activity>
+        <activity android:name=".ui.login.LoginActivity"></activity>
+        <activity android:name=".ui.login.SignUpActivity"></activity>
+        <activity android:name=".ui.dashboard.ReviewEditActivity"></activity>
         <activity
             android:name=".ui.home.EyeBrow.EyebrowActivity"
-            android:label="@string/title_activity_eyebrow"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.home.Astetic.AsteticActivity"
-            android:label="@string/title_activity_astetic"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
+
         <activity
             android:name=".ui.info.interdesigner.InterdesignerActivity"
-            android:label="@string/title_activity_indesigner"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.home.Shop.Shoplist.ReservationActivity"
-            android:label="@string/title_activity_reservation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.info.intershop.IntershopActivity"
-            android:label="@string/title_activity_inshop"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".ui.more.ChatActivity"
-            android:label="@string/title_activity_chat"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.home.Shop.ShopinfoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.home.Shop.ShopfilterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.home.StroeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
                 <activity

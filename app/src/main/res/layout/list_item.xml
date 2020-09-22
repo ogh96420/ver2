@@ -16,7 +16,6 @@
             android:id="@+id/iv_profile"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:layout_gravity="center"
             android:src="@drawable/ic_launcher_background" />
 
     </LinearLayout>
@@ -25,6 +24,15 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/BookMaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="100dp"
+            android:layout_gravity="right"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <TextView
             android:id="@+id/tv_id"
